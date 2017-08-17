@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     //主轴的方向是水平的
     flexDirection:'row',
     padding:5,
-    //侧思的对齐方式是左开始的
+    //侧轴的对齐方式是左开始的
     alignItems:'flex-start',
     flexWrap:'wrap'
   },
