@@ -25,7 +25,6 @@ export default class flex extends Component {
         flexBtn:"flex-end",
         spaceAround:false
       };
-
   }
 
   render() {
@@ -92,6 +91,7 @@ export default class flex extends Component {
               <Text style={styles.tTextViewStyle}>标签7</Text>
               <Text style={styles.tTextViewStyle}>标签8</Text>
               <Text style={styles.tTextViewStyle}>标签标签9</Text>
+              <Text style={styles.tTextViewStyle}>标签标签10</Text>
             </View>
 
           </View>
