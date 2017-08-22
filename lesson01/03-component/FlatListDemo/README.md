@@ -42,6 +42,23 @@ onEndReached= {(info) =>{
 
 ### 三、运行 Deom
 
-```
+* 1、clone 项目
 
 ```
+ git clone https://github.com/ReactNative-Lover/rn-lesson.git
+```
+
+* 2、进入到项目目录，安装依赖
+
+```
+cd lesson01/03-component/FlatListDemo
+yarn install
+```
+
+* 3、运行查看结果
+
+```
+react-native run-android 或 react-native run-ios
+```
+
+![flatlist](./screenshot/flatlist.gif)
