@@ -40,7 +40,7 @@ onEndReached= {(info) =>{
 />
 ```
 
-### 三、运行 Deom
+### 三、运行 Demo
 
 * 1、clone 项目
 
