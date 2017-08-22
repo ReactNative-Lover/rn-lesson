@@ -9,7 +9,7 @@
 * 2、进入到项目目录并安装依赖
 
 ```
-cd lesson01/lesson01/03-component/ActivityIndicatorDemo
+cd lesson01/03-component/ActivityIndicatorDemo
 yarn install
 ```
 
