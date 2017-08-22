@@ -55,7 +55,7 @@
 * 2、进入到项目目录，安装依赖
 
 ```
-cd lesson01/lesson01/03-component/ButtonDemo
+cd lesson01/03-component/ButtonDemo
 yarn install
 ```
 
