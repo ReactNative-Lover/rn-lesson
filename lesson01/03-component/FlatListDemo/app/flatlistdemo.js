@@ -35,7 +35,8 @@ export default class List extends PureComponent  {
   constructor(props){
     super(props);
     this.state = {
-      data:datas
+      data:datas,
+      index:0
     }
   }
 
@@ -65,12 +66,18 @@ export default class List extends PureComponent  {
             // alert('到达底部了')
             datas.push({name:'新数据',age:28,address:'china'})
           }}
-            >  
+
+            ref='FlatList'
+            >
             </FlatList>
 
-            <View style={{alignItems:'flex-end',margin:5,backgroundAlpha:0}}>
-              <Button
-                title="到顶"/>
+            <View style={{flex:1,flexDirection:'row',alignItems: 'flex-end',justifyContent:'flex-end',bottom:10}}>
+              <Text style={{backgroundColor:'green',padding:15,marginRight:5,borderRadius:50}}
+                onPress = {()=>{
+                  //返回到条目顶部
+                  this.refs.FlatList.scrollToIndex({animated: true, index: 0})
+                }}
+                >返回</Text>
             </View>
       </View>
     );
