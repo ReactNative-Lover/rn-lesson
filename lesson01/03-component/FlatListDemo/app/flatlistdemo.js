@@ -65,13 +65,13 @@ export default class List extends PureComponent  {
             // alert('到达底部了')
             datas.push({name:'新数据',age:28,address:'china'})
           }}
-            ></FlatList>
+            >  
+            </FlatList>
 
             <View style={{alignItems:'flex-end',margin:5,backgroundAlpha:0}}>
               <Button
                 title="到顶"/>
             </View>
-
       </View>
     );
   }
