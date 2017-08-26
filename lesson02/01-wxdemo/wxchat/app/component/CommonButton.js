@@ -25,7 +25,8 @@ export default class CommonButton extends Component {
     rightText:'',
     leftImg:'',
     rightImg:'',
-    isShowDivider:false
+    isShowDivider:false,
+    imgSize:25
   }
 
   render() {
@@ -62,8 +63,8 @@ export default class CommonButton extends Component {
   _renderLeftView = (props) =>{
     return(
       <View style={[styles.leftViewStyle]}>
-        <Image source={this.props.leftImg} style={{width:25,height:25}}></Image>
-        <Text style={styles.leftTextStyle}>{this.props.leftText}</Text>
+        <Image source={props.leftImg} style={{width:props.imgSize,height:props.imgSize}}/>
+        <Text style={styles.leftTextStyle}>{props.leftText}</Text>
       </View>
     )
   }

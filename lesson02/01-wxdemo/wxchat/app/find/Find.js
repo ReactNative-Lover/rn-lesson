@@ -64,6 +64,34 @@ export default class Find extends Component {
             }}
           />
 
+          <CommonButton
+            marginTop={15}
+            leftText="购物"
+            leftImg={require('../../imgs/ic_nearby.png')}
+            isShowDivider={true}
+            onClick={()=>{
+              alert('点击')
+            }}
+          />
+          <CommonButton
+            leftText="游戏"
+            leftImg={require('../../imgs/ic_game.png')}
+            rightImg={require('../../imgs/ic_common.png')}
+            rightText="测测多少人在玩"
+            onClick={()=>{
+              alert('点击')
+            }}
+          />
+
+          <CommonButton
+            marginTop={15}
+            leftText="小程序"
+            leftImg={require('../../imgs/ic_program.png')}
+            onClick={()=>{
+              alert('点击')
+            }}
+          />
+
       </View>
     );
   }
