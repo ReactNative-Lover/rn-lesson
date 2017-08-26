@@ -21,7 +21,7 @@ const Button = (props) =>{
       style={{borderRadius:3}}
       onPress={()=>{
         //把事件暴露给调用者
-        this.props.onClick()
+        props.onClick()
       }}>
       <Text style={[styles.textStyle,props.style]}>{props.text}</Text>
     </TouchableHighlight>
