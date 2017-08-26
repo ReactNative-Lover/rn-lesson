@@ -23,4 +23,5 @@ yarn install
 react-native run-android 或 react-native run-ios
 ```
 
-![wx](./screenshot/wx01.gif)
+
+![wx](./screenshot/wx02.gif)
