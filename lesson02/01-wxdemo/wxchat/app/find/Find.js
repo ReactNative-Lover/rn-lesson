@@ -10,6 +10,8 @@ import {
 
 import CommonButton from '../component/CommonButton'
 
+
+
 /**
  * @auther TigerChain
  * @type {Object}
@@ -17,6 +19,7 @@ import CommonButton from '../component/CommonButton'
  */
 export default class Find extends Component {
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
           <CommonButton
@@ -25,8 +28,9 @@ export default class Find extends Component {
             leftImg={require('../../imgs/ic_friends_circle.png')}
             rightImg={require('../../imgs/ic_common.png')}
             onClick={()=>{
-              alert('点击')
+              navigate('FriendCircle',{name:'朋友圈'})
             }}
+          
           />
 
           <CommonButton

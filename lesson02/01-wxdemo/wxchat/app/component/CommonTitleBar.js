@@ -16,6 +16,7 @@ import {
  */
 
 const CommonTitleBar = (props)=>{
+
   return (
     <View style={styles.container}>
 
@@ -52,14 +53,55 @@ _renderLeftView = (props) =>{
 }
 
 /**
- * 渲染右边的View 
+ * 渲染右边的View
  * @param  {[type]} props [description]
  * @return {[type]}       [description]
  */
 _renderRightView = (props)=>{
+
+  //取得右边 View 左边的图片
+  let rightLimg = props.rightLimg
+  //取得右边 View 右边的图片
+  let rightRimg = props.rightRimg
+  // 声明一个 右边的 View
+  let rightView = []
+
+
+  if(rightLimg && rightRimg){
+    rightView.push(
+      <view style={{flexDirection:'row'}}>
+        <TouchableOpacity
+          key={1}
+          onPress={()=>{props.onLeftButtonClick ? props.onRightButtonClick():null}}>
+          <View style={{width:45,height:45,justifyContent:'center'}} >
+             <Image source={rightLimg} style={{width:25,height:25}}></Image>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={()=>{props.onRightButtonClick ? props.onRightButtonClick():null}}>
+          <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
+             <Image source={rightRimg}  style={{width:25,height:25}}></Image>
+          </View>
+        </TouchableOpacity>
+      </view>
+    )
+
+  }else {
+    rightView.push(
+      <TouchableOpacity
+        //如果传递了方法则调用，没有的话，就打印没有设置方法
+        onPress={()=>{props.onRightButtonClick ? props.onRightButtonClick():console.log('dont setting rightButton fun');}}>
+        <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
+           <Image source={rightRimg}  style={{width:25,height:25}}></Image>
+        </View>
+    </TouchableOpacity>
+    )
+  }
+
+
   return(
     <View style={{flexDirection:'row'}}>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         onPress={()=>{alert('搜索')}}>
         <View style={{width:45,height:45,justifyContent:'center'}} >
            <Image source={require('../../imgs/ic_search.png')} style={{width:25,height:25}}></Image>
@@ -70,7 +112,8 @@ _renderRightView = (props)=>{
         <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
            <Image source={require('../../imgs/ic_add.png')}  style={{width:25,height:25}}></Image>
         </View>
-    </TouchableOpacity>
+    </TouchableOpacity> */}
+    {rightView}
   </View>
 
   )

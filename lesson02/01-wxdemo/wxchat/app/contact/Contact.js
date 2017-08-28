@@ -45,10 +45,6 @@ let headViewData = [
 
 export default class Contact extends Component {
 
-
-
-
-
   render() {
     return (
       <View style={styles.container}>
@@ -96,7 +92,7 @@ export default class Contact extends Component {
  */
 _renderItemOrHeadView = (info) => {
   var txt = '  ' + info.item.title;
-   const { navigate } = this.props.navigation;
+  const { navigate } = this.props.navigation;
   return(
     <TouchableHighlight
       activeOpacity={0.7}

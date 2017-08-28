@@ -27,6 +27,9 @@ import MorePopWindow from './component/MorePopWindow'
 
 import ContactDetail from './contact/ContactDetail'
 
+/**导入朋友圈*/
+import FriendCircle from './find/FriendCircle'
+
 export default class Main extends Component {
   render() {
     return (
@@ -98,6 +101,7 @@ const Tab = TabNavigator({
 {
   // tab 位于屏幕底部
   tabBarPosition: 'bottom',
+  backBehavior:'none',
   tabBarOptions: {
     activeTintColor: '#45C018',
     inactiveTintColor: '#999999',
@@ -128,7 +132,8 @@ const Navigator = StackNavigator(
   // 只要是想要导航的界面都要在这里注册一下
   {
     Tab:{ screen: Tab },
-    ContactDetail:{screen:ContactDetail}
+    ContactDetail:{screen:ContactDetail},
+    FriendCircle:{screen:FriendCircle}
   },
   {
     // 由于微信四个tab 页面上面的共用一个titlebar 所以在这里设置就可以，如果每个 title bar 不一样的，则就要去各个界面中去设置了
