@@ -29,6 +29,10 @@ static navigationOptions = {
         <CommonTitleBar
           nav={this.props.navigation}
           backTitle="详细资料"
+          rightRimg={require('../../imgs/ic_add.png')}
+          onRightButtonClick={()=>{
+            alert('瞧瞧')
+          }}
         />
         <View style={styles.itemViewStyle}>
           <Image source={require('../../imgs/ic_common.png')} style={{width:65,height:65}}></Image>
