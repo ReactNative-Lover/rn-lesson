@@ -25,3 +25,7 @@ react-native run-android 或 react-native run-ios
 
 
 ![wx](./screenshot/wx02.gif)
+
+* 完成朋友圈，+ 号弹窗和二维码功能
+
+![wx](./screenshot/wx03.gif)
