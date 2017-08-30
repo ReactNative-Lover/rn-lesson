@@ -52,8 +52,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <HomeMessageList
-      datas = {homeMessageData}/>
+        <HomeMessageList
+        datas = {homeMessageData}/>
+
     );
   }
 }

@@ -30,6 +30,13 @@ import ContactDetail from './contact/ContactDetail'
 /**导入朋友圈*/
 import FriendCircle from './find/FriendCircle'
 
+import PopuWindShow from './component/PopuWindShow'
+
+import Qrcode from './common/Qrcode'
+
+import Screen from './common/Screen'
+
+
 export default class Main extends Component {
   render() {
     return (
@@ -133,38 +140,85 @@ const Navigator = StackNavigator(
   {
     Tab:{ screen: Tab },
     ContactDetail:{screen:ContactDetail},
-    FriendCircle:{screen:FriendCircle}
+    FriendCircle:{screen:FriendCircle},
+    Qrcode:{screen:Qrcode},
+    // PopuWindShow:{screen:PopuWindShow}
+
   },
   {
-    // 由于微信四个tab 页面上面的共用一个titlebar 所以在这里设置就可以，如果每个 title bar 不一样的，则就要去各个界面中去设置了
-    navigationOptions: {
-        headerTitle:(
-          <Text style={{color:'white',fontSize:18,marginLeft:10}}>微信(11)</Text>
-        ),
-        headerStyle:{
-          backgroundColor: '#3E3A39',
-          height:48
-        },
-        headerRight:(
-         //  左边搜索按钮和 + 按钮
-          <View style={{flexDirection:'row'}}>
-            <TouchableOpacity
-              onPress={()=>{alert('搜索')}}>
-              <View style={{width:45,height:45,justifyContent:'center'}} >
-                 <Image source={require('../imgs/ic_search.png')} style={{width:25,height:25}}></Image>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={()=>{alert('+号')}}>
-              <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
-                 <Image source={require('../imgs/ic_add.png')}  style={{width:25,height:25}}></Image>
-              </View>
+    navigationOptions: ({navigation}) => ({
+      headerTitle:(
+        <Text style={{color:'white',fontSize:18,marginLeft:10}}>微信(11)</Text>
+      ),
+      headerStyle:{
+        backgroundColor: '#3E3A39',
+        height:48
+      },
+      headerRight:(
+       //  左边搜索按钮和 + 按钮
+        <View style={{flexDirection:'row'}}>
+          <TouchableOpacity
+            onPress={()=>{alert('搜索')}}>
+            <View style={{width:45,height:45,justifyContent:'center'}} >
+               <Image source={require('../imgs/ic_search.png')} style={{width:25,height:25}}></Image>
+            </View>
           </TouchableOpacity>
-          </View>
-        )
-    },
-  }
+
+           {/* <TouchableOpacity
+            onPress={()=>{
+              alert('+号')
+              navigation.navigate("PopuWindShow")
+            }
+          }>
+            <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
+               <Image source={require('../imgs/ic_add.png')}  style={{width:25,height:25}}></Image>
+            </View>
+        </TouchableOpacity> */}
+        <PopuWindShow nav={navigation}/>
+
+        {/* 可以定义一个 tab 共用的标题栏放在这里，统一管理 */}
+        </View>
+      )
+   }),
+
+
+
+}
+
+    // 由于微信四个tab 页面上面的共用一个titlebar 所以在这里设置就可以，如果每个 title bar 不一样的，则就要去各个界面中去设置了
+    // navigationOptions: {
+    //     headerTitle:(
+    //       <Text style={{color:'white',fontSize:18,marginLeft:10}}>微信(11)</Text>
+    //     ),
+    //     headerStyle:{
+    //       backgroundColor: '#3E3A39',
+    //       height:48
+    //     },
+    //     headerRight:(
+    //      //  左边搜索按钮和 + 按钮
+    //       <View style={{flexDirection:'row'}}>
+    //         <TouchableOpacity
+    //           onPress={()=>{alert('搜索')}}>
+    //           <View style={{width:45,height:45,justifyContent:'center'}} >
+    //              <Image source={require('../imgs/ic_search.png')} style={{width:25,height:25}}></Image>
+    //           </View>
+    //         </TouchableOpacity>
+    //         <TouchableOpacity
+    //           onPress={()=>{
+    //             alert('+号')
+    //             this.props.navigation.navigate("Qrcode")
+    //           }
+    //         }>
+    //           <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>
+    //              <Image source={require('../imgs/ic_add.png')}  style={{width:25,height:25}}></Image>
+    //           </View>
+    //       </TouchableOpacity>
+    //       </View>
+    //     )
+    // },
+
 );
+
 
 const styles = StyleSheet.create({
   container: {

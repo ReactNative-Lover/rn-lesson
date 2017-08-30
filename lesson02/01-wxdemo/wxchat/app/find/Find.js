@@ -10,14 +10,14 @@ import {
 
 import CommonButton from '../component/CommonButton'
 
-
-
 /**
  * @auther TigerChain
  * @type {Object}
  * 发现界面
  */
 export default class Find extends Component {
+
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -30,7 +30,7 @@ export default class Find extends Component {
             onClick={()=>{
               navigate('FriendCircle',{name:'朋友圈'})
             }}
-          
+
           />
 
           <CommonButton
