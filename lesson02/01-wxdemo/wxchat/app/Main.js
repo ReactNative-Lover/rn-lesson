@@ -36,6 +36,8 @@ import Qrcode from './common/Qrcode'
 
 import Screen from './common/Screen'
 
+import Chatting from './contact/Chatting'
+
 
 export default class Main extends Component {
   render() {
@@ -143,6 +145,7 @@ const Navigator = StackNavigator(
     FriendCircle:{screen:FriendCircle},
     Qrcode:{screen:Qrcode},
     // PopuWindShow:{screen:PopuWindShow}
+    Chatting:{screen:Chatting}
 
   },
   {

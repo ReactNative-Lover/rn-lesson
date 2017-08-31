@@ -6,7 +6,8 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  Image
+  Image,
+  PixelRatio
 } from 'react-native';
 
 /**
@@ -32,7 +33,7 @@ export default class CommonButton extends Component {
   render() {
 
     let DividerView = this.props.isShowDivider ?
-    <View style={{height:1,backgroundColor:'#e3e3e3',marginLeft:10,marginRight:10}}/>:null
+    <View style={{height: 1 / PixelRatio.get(),backgroundColor:'#e3e3e3',marginLeft:10,marginRight:10}}/>:null
 
     return (
       <View style={{marginTop:this.props.marginTop}}>
