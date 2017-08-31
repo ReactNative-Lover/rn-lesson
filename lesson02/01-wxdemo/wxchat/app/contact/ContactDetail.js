@@ -73,7 +73,7 @@ static navigationOptions = {
           text="发消息"
           style={{color:'white'}}
           onClick={()=>{
-            alert('asdfa')
+            this.props.navigation.navigate('Chatting',{uname:'宝贝儿'})
           }}
           />
       </View>

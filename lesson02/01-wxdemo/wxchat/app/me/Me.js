@@ -74,7 +74,6 @@ export default class Me extends Component {
           marginTop={15}
           leftText="设置"
           leftImg={require('../../imgs/ic_settings.png')}
-          isShowDivider={true}
           onClick={()=>{
             alert('点击')
           }}
