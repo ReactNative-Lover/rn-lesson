@@ -13,7 +13,7 @@ import Screen from '../common/Screen'
 // 定义列数为 4
 let cols = 4;
 let boxW = 55;
-// 平分的间距算法 
+// 平分的间距算法
 let vMargin  = (Screen.width - cols*boxW)/(cols + 1);
 let hMargin = 25;
 
