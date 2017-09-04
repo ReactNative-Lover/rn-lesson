@@ -1,20 +1,24 @@
 /* @flow weak */
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 
 import Screen from '../common/Screen'
 
+import ViewPager from 'react-native-viewpager'
+
 // 定义列数为 4
 let cols = 4;
 let boxW = 55;
-// 平分的间距算法
+//水平间距的算法
 let vMargin  = (Screen.width - cols*boxW)/(cols + 1);
+//垂直高度
 let hMargin = 25;
 
 /**
@@ -24,43 +28,98 @@ let hMargin = 25;
  */
 
 let datas = [
-  {img:require('../../imgs/ic_more_gallery.png'),title:'相册'},
-  {img:require('../../imgs/ic_more_photo.png'),title:'拍摄'},
-  {img:require('../../imgs/ic_more_movie.png'),title:'视频聊天'},
-  {img:require('../../imgs/ic_more_position.png'),title:'位置'},
-  {img:require('../../imgs/icon_more_hb.png'),title:'红包'},
-  {img:require('../../imgs/ic_more_phone.png'),title:'转账'},
-  {img:require('../../imgs/ic_more_card.png'),title:'名片'},
-  {img:require('../../imgs/ic_more_recorder.png'),title:'话音输入'}
+  {
+    itemData:[
+      {id:1,img:require('../../imgs/ic_more_gallery.png'),title:'相册'},
+      {id:2,img:require('../../imgs/ic_more_photo.png'),title:'拍摄'},
+      {id:3,img:require('../../imgs/ic_more_movie.png'),title:'视频聊天'},
+      {id:4,img:require('../../imgs/ic_more_position.png'),title:'位置'},
+      {id:5,img:require('../../imgs/icon_more_hb.png'),title:'红包'},
+      {id:6,img:require('../../imgs/ic_more_phone.png'),title:'转账'},
+      {id:7,img:require('../../imgs/ic_more_card.png'),title:'名片'},
+      {id:8,img:require('../../imgs/ic_more_recorder.png'),title:'话音输入'}
+    ]
+  },
+  {
+    itemData:[
+      {id:9,img:require('../../imgs/ic_more_collection.png'),title:'我的收藏'},
+
+    ]
+  }
+
 ]
 
-export default class ChatMoreView extends Component {
+export default class ChatMoreView extends PureComponent {
+
+
+
+
+  constructor(props){
+    super(props);
+    const dataSource = new ViewPager.DataSource({
+      pageHasChanged: (p1, p2) => p1 !== p2,
+    });
+    this.state = {
+       dataSource: dataSource.cloneWithPages(datas)
+    }
+    // 要把 _renderPage 方法绑定，或者使用箭头函数，否则会出现 undefined is not an object(this2.props.onItemClick)
+    this._renderPage = this._renderPage.bind(this)
+  }
 
   render() {
-
-    // 存放所有的图文 View
-    let ItemView = []
-
-    datas.map((data,index)=>(
-      //把 每个图文组件放到集合 View 中
-      ItemView.push(
-        <ImgWidText
-          key={index}
-          img={data.img}
-          text={data.title}
-        />
-      )
-    ))
-
     return (
-      <View style={styles.container}>
-          {ItemView}
-      </View>
+      <ViewPager
+      dataSource={this.state.dataSource}
+      renderPage={this._renderPage}
+      // onChangePage={this._onChangePage}
+      isLoop={false}
+      autoPlay={false}/>
     );
   }
+
+  /**
+   渲染每个页面，这是ViewPager的方法
+    _renderPage = (data,pageID)=>{ } 这是箭头函数写法，这样就不用绑定 this 即构造方法中的   this._renderPage = this._renderPage.bind(this) 这句
+  **/
+
+  _renderPage(data: Object, pageID: number | string,) {
+
+  // 定义存放图文组件的View
+  let ItemView = []
+
+  //遍历取出生个图文组件放入到View数组中
+  data.itemData.map((item,index)=>(
+    //把 每个图文组件放到集合 View 中
+    ItemView.push(
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={()=>{
+            this.props.onItemClick(item)
+        }
+      }>
+
+      <ImgWidText
+        key={index}
+        img={item.img}
+        text={item.title}
+      />
+    </TouchableOpacity>
+    )
+  ))
+
+   return (
+     <View style={styles.container}>
+       {ItemView}
+     </View>
+   )
+ }
 }
 
-class ImgWidText extends Component {
+/**
+ * 定义图片文字组件
+ * @type {Object}
+ */
+class ImgWidText extends PureComponent {
   render(){
     return(
       <View style={styles.imgWidTextViewStyle}>
@@ -80,13 +139,12 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     backgroundColor:'#F4F4F4',
     flexWrap:'wrap', //超出换行
-    alignItems:'center',
   },
   // 包含图片文字的 View 样式
   imgWidTextViewStyle:{
     flexDirection:'column',
     alignItems:'center',
-    marginTop:hMargin,
+    marginTop:25,
     marginLeft:vMargin,
   },
   // 包含图片 View 的样式
@@ -106,3 +164,7 @@ const styles = StyleSheet.create({
   }
 
 });
+
+ChatMoreView.propTypes={
+  onItemClick:React.PropTypes.func
+}

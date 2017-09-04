@@ -36,7 +36,7 @@ export default class Chatting extends Component {
     const { params } = this.props.navigation.state;
 
 
-    let moreView = this.state.showMoreView ?  <ChatMoreView />:null
+    let moreView = this.state.showMoreView ?  <ChatMoreView onItemClick={this._onItemClick}/>:null
 
     return (
       <View style={styles.container}>
@@ -68,6 +68,41 @@ export default class Chatting extends Component {
       showEmojView:emoji,
       showMoreView:more,
     })
+  }
+
+  _onItemClick = (itemData)=>{
+
+    switch (itemData.id) {
+      case 1:
+        alert("id"+itemData.id+"--"+itemData.title)
+        break;
+      case 2:
+      alert("id"+itemData.id+"--"+itemData.title)
+        break ;
+      case 3:
+      alert("id"+itemData.id+"--"+itemData.title)
+        break;
+      case 4:
+      alert("id"+itemData.id+"--"+itemData.title)
+        break ;
+
+      case 5:
+     alert("id"+itemData.id+"--"+itemData.title)
+        break;
+      case 6:
+      alert("id"+itemData.id+"--"+itemData.title)
+        break ;
+      case 7:
+      alert("id"+itemData.id+"--"+itemData.title)
+       break;
+      case 8:
+      alert("id"+itemData.id+"--"+itemData.title)
+       break ;
+
+      default:
+
+    }
+
   }
 }
 
