@@ -39,7 +39,7 @@ export default class Find extends Component {
             leftImg={require('../../imgs/ic_scan.png')}
             isShowDivider={true}
             onClick={()=>{
-              alert('点击')
+              navigate('Qrcode')
             }}
           />
           <CommonButton
@@ -47,7 +47,7 @@ export default class Find extends Component {
             leftImg={require('../../imgs/ic_shake.png')}
 
             onClick={()=>{
-              alert('点击')
+              navigate('ShakeAndShake',{name:'摇一摇'})
             }}
           />
 

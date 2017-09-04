@@ -46,13 +46,9 @@ let datas = [
 
     ]
   }
-
 ]
 
 export default class ChatMoreView extends PureComponent {
-
-
-
 
   constructor(props){
     super(props);
@@ -92,6 +88,7 @@ export default class ChatMoreView extends PureComponent {
     //把 每个图文组件放到集合 View 中
     ItemView.push(
       <TouchableOpacity
+        key={index}
         activeOpacity={0.5}
         onPress={()=>{
             this.props.onItemClick(item)
