@@ -38,6 +38,8 @@ import Screen from './common/Screen'
 
 import Chatting from './contact/Chatting'
 
+import ShakeAndShake from './find/ShakeAndShake'
+
 
 export default class Main extends Component {
   render() {
@@ -145,7 +147,8 @@ const Navigator = StackNavigator(
     FriendCircle:{screen:FriendCircle},
     Qrcode:{screen:Qrcode},
     // PopuWindShow:{screen:PopuWindShow}
-    Chatting:{screen:Chatting}
+    Chatting:{screen:Chatting},
+    ShakeAndShake:{screen:ShakeAndShake}
 
   },
   {
