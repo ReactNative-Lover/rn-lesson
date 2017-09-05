@@ -17,9 +17,9 @@ import {
  * @type {Object}
  */
 export default class ChattingBottomBar extends Component {
+
   render() {
     return (
-
 
       <View style={styles.container}>
         <TouchableOpacity  activeOpacity={0.5} onPress={()=>{
@@ -33,9 +33,11 @@ export default class ChattingBottomBar extends Component {
             <Image style={styles.icons} source={require('../../imgs/ic_chat_emoji.png')}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.5} onPress={()=>{
-          this.handPress('add')
-        }}>
+        <TouchableOpacity activeOpacity={0.5} onPress={
+          this.handPress.bind(this,'add')
+          //或使用闭包箭头函数
+          // ()=>{this.handPress('add')}
+        }>
           <Image style={styles.icons} source={require('../../imgs/ic_chat_add.png')}></Image>
         </TouchableOpacity>
       </View>
