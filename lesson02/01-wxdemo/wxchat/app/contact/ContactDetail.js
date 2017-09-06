@@ -11,6 +11,20 @@ import {
 
 import CommonTitleBar from '../component/CommonTitleBar'
 import Button from '../component/Button'
+import CustomActionSheet from '../component/CustomActionSheet'
+
+
+// 模拟详细资料中点击更多的数据
+const actionSheetData = [
+  {img:require('../../imgs/ic_common.png'),title:'设置备注及标签'},
+  {img:require('../../imgs/ic_common.png'),title:'标为星标朋友'},
+  {img:require('../../imgs/ic_common.png'),title:'设置朋友圈权限'},
+  {img:require('../../imgs/ic_common.png'),title:'发送该名片'},
+  {img:require('../../imgs/ic_common.png'),title:'投诉'},
+  {img:require('../../imgs/ic_common.png'),title:'加入黑名单'},
+  {img:require('../../imgs/ic_common.png'),title:'删除'},
+  {img:require('../../imgs/ic_common.png'),title:'添加到桌面'}
+]
 
 /**
  * @author TigerChain
@@ -29,9 +43,9 @@ static navigationOptions = {
         <CommonTitleBar
           nav={this.props.navigation}
           backTitle="详细资料"
-          rightRimg={require('../../imgs/ic_add.png')}
+          rightRimg={require('../../imgs/wechatMore.png')}
           onRightButtonClick={()=>{
-            alert('瞧瞧')
+            this.refs.alert.show(actionSheetData)
           }}
         />
         <View style={styles.itemViewStyle}>
@@ -87,8 +101,18 @@ static navigationOptions = {
           }}
           />
       </View>
+
+      <CustomActionSheet
+        ref="alert"
+        onClick={
+          this.onItemClick
+        }
+      />
       </View>
     );
+  }
+  onItemClick = (item)=>{
+    alert(item.title)
   }
 }
 

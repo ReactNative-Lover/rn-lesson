@@ -9,6 +9,7 @@ import {
   Image,
   PixelRatio
 } from 'react-native';
+import Screen from '../common/Screen'
 
 /**
  * @author TigerChain
@@ -33,7 +34,7 @@ export default class CommonButton extends Component {
   render() {
 
     let DividerView = this.props.isShowDivider ?
-    <View style={{height: 1 / PixelRatio.get(),backgroundColor:'#e3e3e3',marginLeft:10,marginRight:10}}/>:null
+    <View style={{height: Screen.onePixel,backgroundColor:'#e3e3e3',marginLeft:10,marginRight:10}}/>:null
 
     return (
       <View style={{marginTop:this.props.marginTop}}>
@@ -64,7 +65,7 @@ export default class CommonButton extends Component {
   _renderLeftView = (props) =>{
     return(
       <View style={[styles.leftViewStyle]}>
-        <Image source={props.leftImg} style={{width:props.imgSize,height:props.imgSize}}/>
+        {props.leftImg?<Image source={props.leftImg} style={{width:props.imgSize,height:props.imgSize}}/>:null}
         <Text style={styles.leftTextStyle}>{props.leftText}</Text>
       </View>
     )
@@ -80,20 +81,29 @@ export default class CommonButton extends Component {
       return(
         <View style={styles.rightViewStyle}>
           <Text >{this.props.rightText}</Text>
-          <Image source={this.props.rightImg} style={{width:30,height:30,marginLeft:5}}></Image>
+          {this.renderRightImg()}
         </View>
       )
     }else{
-      let rightImgView = this.props.rightImg.length!=0 ?
-         <Image source={this.props.rightImg} style={{width:30,height:30,marginLeft:5}}/>
-      :
-       null
+
       return(
         <View style={styles.rightViewStyle}>
-          {rightImgView}
+          {this.renderRightImg()}
         </View>
       )
     }
+  }
+
+  /**
+   * 渲染右边的图片
+   * @return {[type]} [description]
+   */
+  renderRightImg = ()=>{
+    let rightImgView = this.props.rightImg ? //如果设置图片就显示，否则不显示
+       <Image source={this.props.rightImg} style={{width:this.props.rightImgSize?this.props.rightImgSize:30,height:this.props.rightImgSize?this.props.rightImgSize:30,marginLeft:5}}/>
+    : null
+
+    return rightImgView
   }
 }
 
@@ -121,6 +131,5 @@ const styles = StyleSheet.create({
   rightViewStyle:{
     flexDirection:'row',
     alignItems:'center'
-
   }
 });

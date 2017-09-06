@@ -15,6 +15,9 @@ import CommonButton from '../component/CommonButton'
  */
 export default class Me extends Component {
   render() {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <CommonButton
@@ -25,7 +28,7 @@ export default class Me extends Component {
           leftImg={require('../../imgs/avator.png')}
           rightImg={require('../../imgs/ic_qr_code.png')}
           onClick={()=>{
-            alert('点击')
+            navigate('PersonalInfo',{name:'个人信息'})
           }}
         />
 

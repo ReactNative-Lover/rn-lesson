@@ -89,6 +89,7 @@ _renderRightView = (props)=>{
   }else {
     rightView.push(
       <TouchableOpacity
+        key={2}
         //如果传递了方法则调用，没有的话，就打印没有设置方法
         onPress={()=>{props.onRightButtonClick ? props.onRightButtonClick():console.log('dont setting rightButton fun');}}>
         <View style={{width:45,height:45,justifyContent:'center',alignItems:'center'}}>

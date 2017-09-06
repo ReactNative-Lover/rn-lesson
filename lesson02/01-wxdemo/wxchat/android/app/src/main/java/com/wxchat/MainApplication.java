@@ -9,6 +9,8 @@ import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;

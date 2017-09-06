@@ -31,14 +31,16 @@ import ContactDetail from './contact/ContactDetail'
 import FriendCircle from './find/FriendCircle'
 
 import PopuWindShow from './component/PopuWindShow'
-
+//二维码界面
 import Qrcode from './common/Qrcode'
 
 import Screen from './common/Screen'
-
+//聊天界面
 import Chatting from './contact/Chatting'
-
+//摇一摇界面
 import ShakeAndShake from './find/ShakeAndShake'
+//个人信息界面
+import PersonalInfo from './me/PersonalInfo'
 
 
 export default class Main extends Component {
@@ -148,7 +150,8 @@ const Navigator = StackNavigator(
     Qrcode:{screen:Qrcode},
     // PopuWindShow:{screen:PopuWindShow}
     Chatting:{screen:Chatting},
-    ShakeAndShake:{screen:ShakeAndShake}
+    ShakeAndShake:{screen:ShakeAndShake},
+    PersonalInfo:{screen:PersonalInfo}
 
   },
   {
