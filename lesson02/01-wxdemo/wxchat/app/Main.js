@@ -41,6 +41,8 @@ import Chatting from './contact/Chatting'
 import ShakeAndShake from './find/ShakeAndShake'
 //个人信息界面
 import PersonalInfo from './me/PersonalInfo'
+//设置备注及标签
+import SettingAndRemark from './contact/SettingAndRemark'
 
 
 export default class Main extends Component {
@@ -151,7 +153,8 @@ const Navigator = StackNavigator(
     // PopuWindShow:{screen:PopuWindShow}
     Chatting:{screen:Chatting},
     ShakeAndShake:{screen:ShakeAndShake},
-    PersonalInfo:{screen:PersonalInfo}
+    PersonalInfo:{screen:PersonalInfo},
+    SettingAndRemark:{screen:SettingAndRemark}
 
   },
   {

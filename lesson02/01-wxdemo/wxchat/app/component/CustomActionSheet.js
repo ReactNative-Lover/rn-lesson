@@ -144,6 +144,14 @@ dismiss(event) {
   }
 }
 
+isShow(){
+  if(this.state.hide){
+    return false;
+  }else{
+    return true ;
+  }
+}
+
 //点击
 onItemClick = (item)=> {
   if(!this.state.hide){

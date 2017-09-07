@@ -9,6 +9,8 @@ import {
   Image
 } from 'react-native';
 
+import Screen from '../common/Screen'
+
 /**
  * @author TigerChain
  * @type {Object}
@@ -197,7 +199,7 @@ const styles = StyleSheet.create({
   //竖线的样式
   dividerStyle:{
     height: 30,
-    width:1,
+    width:Screen.onePixel,
     marginTop: 10,
     marginBottom: 10,
     backgroundColor: '#444444'
