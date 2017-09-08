@@ -3240,10 +3240,6 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-actionsheet@^2.2.2:
-  version "2.2.2"
-  resolved "http://registry.npm.taobao.org/react-native-actionsheet/download/react-native-actionsheet-2.2.2.tgz#469075a7d1c8e5b5d0829294bf9a2c4d2eb7e34e"
-
 react-native-animatable@^1.2.3:
   version "1.2.3"
   resolved "http://registry.npm.taobao.org/react-native-animatable/download/react-native-animatable-1.2.3.tgz#d0f0bd694833b934f3aaa1275739228b786ecb4b"
@@ -3291,6 +3287,10 @@ react-native-tab-view@^0.0.65:
   resolved "http://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-0.0.65.tgz#b685ea3081ff7c96486cd997361026c407302c59"
   dependencies:
     prop-types "^15.5.8"
+
+react-native-tag-input@^0.0.14:
+  version "0.0.14"
+  resolved "http://registry.npm.taobao.org/react-native-tag-input/download/react-native-tag-input-0.0.14.tgz#742112640a73d11fa8ae87383458c8fc00739775"
 
 react-native-viewpager@^0.2.13:
   version "0.2.13"

@@ -65,6 +65,7 @@ _renderRightView = (props)=>{
   let rightLimg = props.rightLimg
   //取得右边 View 右边的图片
   let rightRimg = props.rightRimg
+  let rightButton = props.rightButton
   // 声明一个 右边的 View
   let rightView = []
 
@@ -88,6 +89,17 @@ _renderRightView = (props)=>{
       </view>
     )
 
+  }else if(rightButton){
+    rightView.push(
+      <TouchableOpacity
+        key={3}
+        onPress={()=>{props.onLeftPerButtonClick?props.onLeftPerButtonClick():null}}
+        >
+          <Text style={styles.textButton}>
+            {props.rightButton}
+          </Text>
+      </TouchableOpacity>
+    )
   }else {
     rightView.push(
       <TouchableOpacity
@@ -203,5 +215,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     backgroundColor: '#444444'
+  },
+  //右边带文字按钮样式
+  textButton:{
+    backgroundColor:'#2E8B57',
+    textAlignVertical:'center',
+    height:30,
+    width:60,
+    color:'white',
+    borderRadius:2,
+    textAlign:'center',
+    marginRight:7
   }
 });

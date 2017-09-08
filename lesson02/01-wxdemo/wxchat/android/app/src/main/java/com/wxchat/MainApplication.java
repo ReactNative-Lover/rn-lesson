@@ -11,6 +11,8 @@ import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
@@ -46,6 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNShakeEventPackage(),
             new RCTCameraPackage()
+
       );
     }
   };

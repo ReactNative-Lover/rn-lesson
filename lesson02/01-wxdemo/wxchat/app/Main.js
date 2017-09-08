@@ -43,6 +43,8 @@ import ShakeAndShake from './find/ShakeAndShake'
 import PersonalInfo from './me/PersonalInfo'
 //设置备注及标签
 import SettingAndRemark from './contact/SettingAndRemark'
+//添加标签或给联系人分类
+import AddFlagAndCategory from './contact/AddFlagAndCategory'
 
 
 export default class Main extends Component {
@@ -154,7 +156,8 @@ const Navigator = StackNavigator(
     Chatting:{screen:Chatting},
     ShakeAndShake:{screen:ShakeAndShake},
     PersonalInfo:{screen:PersonalInfo},
-    SettingAndRemark:{screen:SettingAndRemark}
+    SettingAndRemark:{screen:SettingAndRemark},
+    AddFlagAndCategory:{screen:AddFlagAndCategory}
 
   },
   {
