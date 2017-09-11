@@ -59,6 +59,8 @@ export default class Contact extends Component {
           { key: "D", data: [{ title: "淡然" ,img:require('../../imgs/ic_common.png') }, { title: "段玉龙" },{title:"德行"},{title:"第一名"}] },
           { key: "W", data: [{ title: "王磊", }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }]},
         ]}
+        //去掉垂直滚动条
+        showsVerticalScrollIndicator={false}
         // 头部标签
         renderSectionHeader={this._renderSectionItem}
         //渲染列表

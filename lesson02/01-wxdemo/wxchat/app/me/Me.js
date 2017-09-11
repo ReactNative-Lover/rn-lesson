@@ -37,7 +37,7 @@ export default class Me extends Component {
           leftText="钱包"
           leftImg={require('../../imgs/ic_wallet.png')}
           onClick={()=>{
-            alert('点击')
+            navigate('Wallet',{titleName:'我的钱包'})
           }}
         />
         <CommonButton
