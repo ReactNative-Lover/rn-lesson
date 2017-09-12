@@ -46,7 +46,7 @@ export default class Me extends Component {
           leftImg={require('../../imgs/ic_collect.png')}
           isShowDivider={true}
           onClick={()=>{
-            alert('点击')
+            navigate('Collection',{titleName:'我的收藏'})
           }}
         />
         <CommonButton
@@ -78,7 +78,7 @@ export default class Me extends Component {
           leftText="设置"
           leftImg={require('../../imgs/ic_settings.png')}
           onClick={()=>{
-            alert('点击')
+            navigate('Setting',{titleName:'设置'})
           }}
         />
       </View>

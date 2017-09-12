@@ -15,12 +15,14 @@ import {
  * @type {Object}
  */
 export default class ImageAndText extends Component {
+
   render() {
     return (
       <TouchableOpacity
+        onPress={this.props.onClick?this.props.onClick:console.log('no setting onclick function')}
         activeOpacity={0.5}>
         <View style={styles.container}>
-          <Image source={this.props.img} style={styles.img}/>
+          <Image source={this.props.img} style={{width:this.props.imgSize?this.props.imgSize:45,height:this.props.imgSize?this.props.imgSize:45}}/>
           <Text style={[styles.titleText,{color:this.props.textColor,fontSize:this.props.textfontSize}]}>{this.props.title}</Text>
           {this.props.subTitle?<Text style={[styles.subTitleText]}>{this.props.subTitle}</Text>:null}
 
@@ -33,10 +35,6 @@ export default class ImageAndText extends Component {
 const styles = StyleSheet.create({
   container: {
     alignItems:'center'
-  },
-  img:{
-    height:45,
-    width:45,
   },
   titleText:{
     marginTop:7

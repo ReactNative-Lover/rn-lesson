@@ -43,6 +43,10 @@ import ShakeAndShake from './find/ShakeAndShake'
 import PersonalInfo from './me/PersonalInfo'
 //钱包
 import Wallet from './me/Wallet'
+//设置
+import Setting from './me/Setting'
+//收藏
+import Collection from './me/Collection'
 //设置备注及标签
 import SettingAndRemark from './contact/SettingAndRemark'
 //添加标签或给联系人分类
@@ -160,8 +164,11 @@ const Navigator = StackNavigator(
     ShakeAndShake:{screen:ShakeAndShake},
     PersonalInfo:{screen:PersonalInfo},
     Wallet:{screen:Wallet},
+    Setting:{screen:Setting},
+    Collection:{screen:Collection},
     SettingAndRemark:{screen:SettingAndRemark},
     AddFlagAndCategory:{screen:AddFlagAndCategory}
+
 
   },
   {

@@ -3,8 +3,10 @@
 <!-- Base application theme. -->
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <!-- Customize your theme here. -->
-
+    <!--这样设置会让 RN 中的 TextInput 获取焦点的颜色变成绿色，统一设置-->
     <item name="colorControlActivated">@android:color/holo_green_dark</item>
+    <!--使用三方 spalsh 组件设置 splash 图片-->
+    <item name="android:windowBackground">@drawable/splash</item>
 </style>
 
 </resources>

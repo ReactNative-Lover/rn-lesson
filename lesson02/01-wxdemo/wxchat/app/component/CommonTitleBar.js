@@ -16,19 +16,14 @@ import Screen from '../common/Screen'
  * @type {Object}
  * 通用的 titlebar  定义成一个无状态的组件
  */
-
 const CommonTitleBar = (props)=>{
 
   return (
     <View style={styles.container}>
-
       <View style={styles.titleBar}>
-
         {this._renderLeftView(props)}
-
         {this._renderRightView(props)}
       </View>
-
     </View>
   );
 }
@@ -72,10 +67,9 @@ _renderRightView = (props)=>{
 
   if(rightLimg && rightRimg){
     rightView.push(
-      <view style={{flexDirection:'row'}}>
+      <View key={1} style={{flexDirection:'row'}}>
         <TouchableOpacity
-          key={1}
-          onPress={()=>{props.onLeftButtonClick ? props.onRightButtonClick():null}}>
+          onPress={()=>{props.onLeftButtonClick ? props.onLeftButtonClick():null}}>
           <View style={{width:45,height:45,justifyContent:'center'}} >
              <Image source={rightLimg} style={{width:25,height:25}}></Image>
           </View>
@@ -86,7 +80,7 @@ _renderRightView = (props)=>{
              <Image source={rightRimg}  style={{width:25,height:25}}></Image>
           </View>
         </TouchableOpacity>
-      </view>
+      </View>
     )
 
   }else if(rightButton){
@@ -112,7 +106,6 @@ _renderRightView = (props)=>{
     </TouchableOpacity>
     )
   }
-
 
   return(
     <View style={{flexDirection:'row'}}>

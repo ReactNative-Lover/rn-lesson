@@ -39,13 +39,21 @@ export default class CustomActionSheet extends PureComponent {
       return null
     }else{
       return (
-          <View style={styles.container}>
+        <TouchableHighlight
+          underlayColor='transparent'
+          activeOpacity={1}
+          style={styles.container}
+          onPress={()=>{
+            this.out()
+          }}
+          >
+          <View>
             <Animated.View style={ styles.mask }>
             </Animated.View>
-            <Animated.View style={[styles.tip , {transform: [{
+            <Animated.View style={[styles.tip ,{height:this.props.actionSheetHeight?this.props.actionSheetHeight:aHeight}, {transform: [{
                translateY: this.state.offset.interpolate({
                 inputRange: [0, 1],
-                outputRange: [Screen.height, (Screen.height-aHeight)]
+                outputRange: [Screen.height, (Screen.height-(this.props.actionSheetHeight?this.props.actionSheetHeight:aHeight))]
                }),
              }]
            }]}>
@@ -59,6 +67,8 @@ export default class CustomActionSheet extends PureComponent {
            </ScrollView>
           </Animated.View>
         </View>
+        </TouchableHighlight>
+
       );
     }
   }
@@ -79,7 +89,7 @@ renderItem(){
       key={index}
       >
         <View style={styles.itemView}>
-          <Image source={item.img} style={{width:30,height:30}}></Image>
+          {item.img?<Image source={item.img} style={{width:30,height:30}}/>:null}
           <Text style={styles.itemText}>{item.title}</Text>
         </View>
       </TouchableHighlight>
@@ -190,7 +200,6 @@ const styles = StyleSheet.create({
  },
  tip:{
    width:aWidth,
-   height:aHeight,
    backgroundColor:"#fff",
    alignItems:"center",
    paddingBottom:20

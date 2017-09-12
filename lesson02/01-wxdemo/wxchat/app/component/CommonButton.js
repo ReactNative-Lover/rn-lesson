@@ -66,7 +66,7 @@ export default class CommonButton extends Component {
     return(
       <View style={[styles.leftViewStyle]}>
         {props.leftImg?<Image source={props.leftImg} style={{width:props.imgSize,height:props.imgSize}}/>:null}
-        <Text style={styles.leftTextStyle}>{props.leftText}</Text>
+        <Text style={props.leftImg?styles.leftTextStyle:{marginLeft:0}}>{props.leftText}</Text>
       </View>
     )
   }

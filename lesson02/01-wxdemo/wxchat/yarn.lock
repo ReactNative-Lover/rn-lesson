@@ -3288,10 +3288,6 @@ react-native-tab-view@^0.0.65:
   dependencies:
     prop-types "^15.5.8"
 
-react-native-tag-input@^0.0.14:
-  version "0.0.14"
-  resolved "http://registry.npm.taobao.org/react-native-tag-input/download/react-native-tag-input-0.0.14.tgz#742112640a73d11fa8ae87383458c8fc00739775"
-
 react-native-viewpager@^0.2.13:
   version "0.2.13"
   resolved "http://registry.npm.taobao.org/react-native-viewpager/download/react-native-viewpager-0.2.13.tgz#75e421ae90e89efcd77d2c077c0525382b7c39c5"
@@ -3618,6 +3614,10 @@ rimraf@2, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
 rimraf@~2.2.6:
   version "2.2.8"
   resolved "http://registry.npm.taobao.org/rimraf/download/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
+
+rn-splash-screen@^5.2.0:
+  version "5.2.0"
+  resolved "http://registry.npm.taobao.org/rn-splash-screen/download/rn-splash-screen-5.2.0.tgz#1ce509e27d14d3dd0949427667fbc3d2a8dd853c"
 
 rndm@1.2.0:
   version "1.2.0"
