@@ -44,7 +44,7 @@ export default class CustomActionSheet extends PureComponent {
           activeOpacity={1}
           style={styles.container}
           onPress={()=>{
-            this.out()
+            this.dismiss()
           }}
           >
           <View>
@@ -68,7 +68,6 @@ export default class CustomActionSheet extends PureComponent {
           </Animated.View>
         </View>
         </TouchableHighlight>
-
       );
     }
   }

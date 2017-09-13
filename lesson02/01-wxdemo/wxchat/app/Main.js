@@ -45,6 +45,8 @@ import PersonalInfo from './me/PersonalInfo'
 import Wallet from './me/Wallet'
 //设置
 import Setting from './me/Setting'
+//卡包
+import CardHolder from './me/CardHolder'
 //收藏
 import Collection from './me/Collection'
 //设置备注及标签
@@ -70,6 +72,7 @@ const Tab = TabNavigator({
       tabBarLabel: '微信',
       tabBarIcon: ({focused, tintColor }) => (
         <TabBarIcon
+          badgenum={7}
           tintColor={tintColor}
           focused={focused}
           normalImage={require('../imgs/ic_weixin_normal.png')}
@@ -164,6 +167,7 @@ const Navigator = StackNavigator(
     ShakeAndShake:{screen:ShakeAndShake},
     PersonalInfo:{screen:PersonalInfo},
     Wallet:{screen:Wallet},
+    CardHolder:{screen:CardHolder},
     Setting:{screen:Setting},
     Collection:{screen:Collection},
     SettingAndRemark:{screen:SettingAndRemark},

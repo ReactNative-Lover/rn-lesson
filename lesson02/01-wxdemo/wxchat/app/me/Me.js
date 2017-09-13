@@ -62,7 +62,7 @@ export default class Me extends Component {
           leftImg={require('../../imgs/ic_kabao.png')}
           isShowDivider={true}
           onClick={()=>{
-            alert('点击')
+            navigate('CardHolder',{titleName:'卡包'})
           }}
         />
         <CommonButton

@@ -95,7 +95,6 @@ export default class Wallet extends BaseNoTitleBarComponent {
          renderItem={this._renderItem}
          sections={sections}
          showsVerticalScrollIndicator={false}
-         ItemSeparatorComponent={() => <View><Text></Text></View>}
          ListHeaderComponent={this._renderHeadView}
          keyExtractor = {this._createUniqueKey}
        />
@@ -209,45 +208,65 @@ renderGridView = (item,i,datas)=>{
  */
 onItemClick = (item)=>{
   alert(item.title)
+  const {navigate} = this.props.navigation
   switch (item.id) {
+    //信用卡还款
     case 1:
 
       break;
+    // 手机充值
     case 2:
       break ;
-
+    // 理财通
     case 3:
       break ;
+    // 生活缴费
     case 4:
       break ;
+    // Q 币充值
     case 5:
       break ;
+    // 城市服务
     case 6:
       break ;
+    // 腾讯公益
     case 7:
      break ;
+    //膜拜单车
     case 8:
      break ;
+    // 腾讯王卡
     case 9:
      break ;
+    // 火车票机票
     case 10:
      break ;
+    // 滴滴出行
     case 11:
      break ;
+    // 京东优选
     case 12:
      break ;
+    //盖外卖
     case 13:
      break ;
+    //电影演出赛事
     case 14:
      break ;
+    // 吃喝玩乐
     case 15:
 
      break ;
+     // 酒店
     case 16:
+
      break;
+     //蘑菇街女装
     case 17:
      break ;
+    //58到家
      case 18:
+
      break ;
     default:
 

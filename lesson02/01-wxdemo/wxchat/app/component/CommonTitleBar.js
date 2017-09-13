@@ -61,11 +61,12 @@ _renderRightView = (props)=>{
   //取得右边 View 右边的图片
   let rightRimg = props.rightRimg
   let rightButton = props.rightButton
+  let rightText = props.rightText
   // 声明一个 右边的 View
   let rightView = []
 
 
-  if(rightLimg && rightRimg){
+  if(rightLimg && rightRimg){//右边是两张图片
     rightView.push(
       <View key={1} style={{flexDirection:'row'}}>
         <TouchableOpacity
@@ -83,7 +84,7 @@ _renderRightView = (props)=>{
       </View>
     )
 
-  }else if(rightButton){
+  }else if(rightButton){//右边是按钮
     rightView.push(
       <TouchableOpacity
         key={3}
@@ -94,8 +95,30 @@ _renderRightView = (props)=>{
           </Text>
       </TouchableOpacity>
     )
-  }else {
+  }else if(rightText){ // 左边是文字
     rightView.push(
+      props.divider?
+      <TouchableOpacity
+        key={4}
+        //如果传递了方法则调用，没有的话，就打印没有设置方法
+        onPress={()=>{props.onRightTextClick ? props.onRightTextClick():console.log('dont setting rightButton fun');}}>
+        <View style={{height:45,justifyContent:'center',alignItems:'center',flexDirection:'row'}}>
+           <View style={styles.dividerStyle} />
+           <Text style={[styles.rightText,{marginLeft:10,marginRight:10}]}>{rightText}</Text>
+        </View>
+    </TouchableOpacity>
+    :<TouchableOpacity
+          key={4}
+          //如果传递了方法则调用，没有的话，就打印没有设置方法
+          onPress={()=>{props.onRightTextClick ? props.onRightTextClick():console.log('dont setting rightButton fun');}}>
+          <View style={{height:45,justifyContent:'center',alignItems:'center',flexDirection:'row'}}>
+             <Text style={[styles.rightText,{marginRight:10}]}>{rightText}</Text>
+          </View>
+      </TouchableOpacity>
+    )
+  }
+  else {
+    rightView.push(//右边是图片
       <TouchableOpacity
         key={2}
         //如果传递了方法则调用，没有的话，就打印没有设置方法
@@ -219,5 +242,10 @@ const styles = StyleSheet.create({
     borderRadius:2,
     textAlign:'center',
     marginRight:7
+  },
+  //右边文字的样式
+  rightText:{
+    color:'white',
+    fontSize:13
   }
 });

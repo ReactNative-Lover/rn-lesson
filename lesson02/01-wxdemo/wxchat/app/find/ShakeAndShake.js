@@ -10,6 +10,7 @@ import {
 
 import CommonTitleBar from '../component/CommonTitleBar'
 import Screen from '../common/Screen'
+import ImageTextState from '../component/ImageTextState'
 
 
 //以下是导入三方库
@@ -64,6 +65,12 @@ export default class ShakeAndShake extends Component {
         <View style={styles.shakeView}>
             {this.renderTopView()}
           {this.renderBottomView()}
+        </View>
+
+        <View style={{flexDirection:'row',marginBottom:15}}>
+          <ImageTextState img={require('../../imgs/ic_more_card.png')} text="人"/>
+          <ImageTextState img={require('../../imgs/a6m.png')} text="歌曲"/>
+          <ImageTextState img={require('../../imgs/a6q.png')} text="电视"/>
         </View>
       </View>
     );
