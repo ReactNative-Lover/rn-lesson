@@ -26,7 +26,9 @@ export default class AddFriendsItem extends Component {
             <Text>{this.props.subTitle}</Text>
           </View>
         </View>
-        <View style={styles.dividerStyle}></View>
+
+        {this.props.isShowDivider?<View style={styles.dividerStyle}></View>:null}
+
       </View>
     );
   }
@@ -34,10 +36,11 @@ export default class AddFriendsItem extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop:10,
 
   },
   itemView:{
+    marginTop:10,
+    marginBottom:10,
     flexDirection:'row',
     alignItems:'center',
   },
@@ -57,7 +60,6 @@ const styles = StyleSheet.create({
     fontSize:10,
   },
   dividerStyle:{
-    marginTop:10,
     height:Screen.onePixel,
     backgroundColor:'#e3e3e3'
   }

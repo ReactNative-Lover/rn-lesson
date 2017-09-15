@@ -72,6 +72,7 @@ export default class AddFriends extends BaseNoTitleBarComponent {
           onPress={()=>this._onImteClick(data)}>
           <View style={{paddingLeft:10,paddingRight:10}}>
             <AddFriendsItem
+            isShowDivider={index==datas.length-1?false:true}
             img={data.img}
             title={data.title}
             subTitle={data.subTitle}
