@@ -13,7 +13,10 @@ import {
 import BaseNoTitleBarComponent from '../common/BaseNoTitleBarComponent'
 import CommonTitleBar from '../component/CommonTitleBar'
 
-
+/**
+ * 模拟数据
+ * @type {Array}
+ */
 let datas = [
    { key: "1", title:'会员卡',data:[{id:1,img:require('../../imgs/ad4.png'),cname:'会员卡',isShowCount:true,count:0}] },
    { key: "2", title:'优惠卷',data:[{id:2,img:require('../../imgs/adc.png'),cname:'朋友的优惠券',isShowCount:false,count:0},{id:3,img:require('../../imgs/adf.png'),cname:'我的票卷',isShowCount:true,count:0}]}

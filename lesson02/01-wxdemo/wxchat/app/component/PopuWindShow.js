@@ -35,8 +35,8 @@ import MorePopWindow from './MorePopWindow'
           </TouchableOpacity> */}
           <TouchableOpacity
             onPress={()=>{
-                this.setState({
-                  showPop:!this.state.showPop
+                this.setState(preState=>{
+                  return{showPop:!preState.showPop}
                 })
             }}>
 
@@ -56,11 +56,7 @@ import MorePopWindow from './MorePopWindow'
                   menuTexts={['发起群聊', '添加朋友', '扫一扫', '收付款', '帮助与反馈']}
                   />
               </View>
-
           </TouchableOpacity>
-
-
-
     </View>
     );
   }

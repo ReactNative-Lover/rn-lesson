@@ -68,9 +68,9 @@ export default class ShakeAndShake extends Component {
         </View>
 
         <View style={{flexDirection:'row',marginBottom:15}}>
-          <ImageTextState img={require('../../imgs/ic_more_card.png')} text="人"/>
-          <ImageTextState img={require('../../imgs/a6m.png')} text="歌曲"/>
-          <ImageTextState img={require('../../imgs/a6q.png')} text="电视"/>
+          <ImageTextState normalImg={require('../../imgs/ic_more_card.png')} pressedImg={require('../../imgs/ic_more_card.png')} focused = {true} text="人"/>
+          <ImageTextState normalImg={require('../../imgs/a6m.png')} pressedImg={require('../../imgs/a6n.png')} focused = {false} text="歌曲"/>
+          <ImageTextState normalImg={require('../../imgs/a6q.png')} pressedImg ={require('../../imgs/a6r.png')} focused = {false} text="电视"/>
         </View>
       </View>
     );

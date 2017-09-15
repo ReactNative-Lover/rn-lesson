@@ -6,10 +6,14 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+//导入三方图片选择组件
 
 import CommonTitleBar from '../component/CommonTitleBar'
 import ChattingBottomBar from '../component/ChattingBottomBar'
 import ChatMoreView from '../component/ChatMoreView'
+
+
+
 
 /**
  * @author TigerChain
@@ -69,13 +73,19 @@ export default class Chatting extends Component {
       showMoreView:more,
     })
   }
-
+  /**
+   * 点击+号弹出的条目点击事件
+   * @param  {[type]} itemData [description]
+   * @return {[type]}          [description]
+   */
   _onItemClick = (itemData)=>{
 
     switch (itemData.id) {
+      //相册
       case 1:
-        alert("id"+itemData.id+"--"+itemData.title)
-        break;
+
+      break;
+      //拍摄
       case 2:
       alert("id"+itemData.id+"--"+itemData.title)
         break ;
@@ -98,6 +108,9 @@ export default class Chatting extends Component {
       case 8:
       alert("id"+itemData.id+"--"+itemData.title)
        break ;
+    case 9:
+      alert("id"+itemData.id+"--"+itemData.title)
+      break ;
 
       default:
 

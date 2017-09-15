@@ -9,12 +9,12 @@ import {
 
 import {QRScannerView} from 'ac-qrcode';
 
-import Images from './Images'
-import constants from './Constants'
+import Images from '../Images'
+import constants from '../Constants'
 
-import ImageButton from '../component/ImageButton'
+import ImageButton from '../../component/ImageButton'
 
-import CommonTitleBar from '../component/CommonTitleBar'
+import CommonTitleBar from '../../component/CommonTitleBar'
 
 /**
  * 二维码界面
@@ -46,7 +46,7 @@ export default class Qrcode extends Component {
                   <CommonTitleBar
                     nav={this.props.navigation}
                     backTitle="二维码/条码"
-                    rightRimg={require('../../imgs/wechatMore.png')}
+                    rightRimg={require('../../../imgs/wechatMore.png')}
                     onRightButtonClick={()=>{
                       alert('拍照')
                     }}

@@ -32,7 +32,9 @@ import FriendCircle from './find/FriendCircle'
 
 import PopuWindShow from './component/PopuWindShow'
 //二维码界面
-import Qrcode from './common/Qrcode'
+import Qrcode from './common/tabbartoppop/Qrcode'
+//添加朋友
+import AddFriends from './common/tabbartoppop/AddFriends'
 
 import Screen from './common/Screen'
 //聊天界面
@@ -162,6 +164,7 @@ const Navigator = StackNavigator(
     ContactDetail:{screen:ContactDetail},
     FriendCircle:{screen:FriendCircle},
     Qrcode:{screen:Qrcode},
+    AddFriends:{screen:AddFriends},
     // PopuWindShow:{screen:PopuWindShow}
     Chatting:{screen:Chatting},
     ShakeAndShake:{screen:ShakeAndShake},

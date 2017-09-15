@@ -50,8 +50,6 @@ export default class MorePopWindow extends Component {
       var icons = this.props.menuIcons;
       var texts = this.props.menuTexts;
 
-
-
       for (let i = 0; i < icons.length; i++) {
         menuItems.push(
           <TouchableOpacity key={i} activeOpacity={0.3} onPress={()=>{
@@ -84,20 +82,22 @@ export default class MorePopWindow extends Component {
 
 
     switch (i) {
+      //发起群聊
       case 0:
 
       break;
+      //添加朋友
       case 1:
+      navigation.navigate('AddFriends',{titleName:'添加朋友'})
         break ;
-      case 0:
-
-      break;
+      //扫一扫
       case 2:
       navigation.navigate('Qrcode')
       break ;
+      //收付款
       case 3:
-
       break;
+      //帮助与反馈
       case 4:
       break ;
 

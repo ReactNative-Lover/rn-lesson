@@ -15,7 +15,7 @@ import Screen from '../common/Screen'
 
 /**
  * @author TigerChain
- * 定义文本和输入框组件 备注信息中使用
+ * 定义文本和输入框组件 备注信息中使用,带删除按钮
  * @type {Object}
  */
 

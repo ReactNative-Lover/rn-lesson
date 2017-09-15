@@ -110,8 +110,6 @@ _separatorComponent = ()=>{
     alert('+')
   }
 
-
-
 }
 
 const styles = StyleSheet.create({
