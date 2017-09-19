@@ -38,6 +38,7 @@
 		2887F3C91E7A4DB9AB9A623F /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C9971C11F649C4A6BD7BF7 /* libRCTCamera.a */; };
 		46CAD36A50FA482A959C41FE /* libRNShakeEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4154A9224B9C42AABBCFC5B4 /* libRNShakeEvent.a */; };
 		625DFE17AAB54125B519F3B5 /* libRCTSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB20327504E942B6A4523D4D /* libRCTSplashScreen.a */; };
+		34C7F3F1252540CAA8CAA8A1 /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CD5A4D1E3242DBABFDBD59 /* libimageCropPicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +264,8 @@
 		4154A9224B9C42AABBCFC5B4 /* libRNShakeEvent.a */ = {isa = PBXFileReference; name = "libRNShakeEvent.a"; path = "libRNShakeEvent.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		3C7DFB6CC9EC4938A7D444D1 /* RCTSplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "RCTSplashScreen.xcodeproj"; path = "../node_modules/rn-splash-screen/ios/RCTSplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		AB20327504E942B6A4523D4D /* libRCTSplashScreen.a */ = {isa = PBXFileReference; name = "libRCTSplashScreen.a"; path = "libRCTSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EE49ED17A7BB4DB299FDB0DD /* imageCropPicker.xcodeproj */ = {isa = PBXFileReference; name = "imageCropPicker.xcodeproj"; path = "../node_modules/react-native-customized-image-picker/ios/imageCropPicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		57CD5A4D1E3242DBABFDBD59 /* libimageCropPicker.a */ = {isa = PBXFileReference; name = "libimageCropPicker.a"; path = "libimageCropPicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +295,7 @@
 				2887F3C91E7A4DB9AB9A623F /* libRCTCamera.a in Frameworks */,
 				46CAD36A50FA482A959C41FE /* libRNShakeEvent.a in Frameworks */,
 				625DFE17AAB54125B519F3B5 /* libRCTSplashScreen.a in Frameworks */,
+				34C7F3F1252540CAA8CAA8A1 /* libimageCropPicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +465,7 @@
 				B123E3A87A2342C8B1A48AF5 /* RCTCamera.xcodeproj */,
 				7B5865C2C2EC47AD9ABCE794 /* RNShakeEvent.xcodeproj */,
 				3C7DFB6CC9EC4938A7D444D1 /* RCTSplashScreen.xcodeproj */,
+				EE49ED17A7BB4DB299FDB0DD /* imageCropPicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -988,12 +993,14 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wxchat.app/wxchat";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Debug;
@@ -1014,12 +1021,14 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wxchat.app/wxchat";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Release;
@@ -1044,6 +1053,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Debug;
@@ -1067,6 +1077,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Release;
@@ -1096,12 +1107,14 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Debug;
@@ -1131,12 +1144,14 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios",
 					"$(SRCROOT)\..\node_modules\react-native-shake-event\ios",
 					"$(SRCROOT)\..\node_modules\rn-splash-screen\ios\RCTSplashScreen",
+					"$(SRCROOT)\..\node_modules\react-native-customized-image-picker\ios/**",
 				);
 			};
 			name = Release;
@@ -1161,6 +1176,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1185,6 +1201,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Release;

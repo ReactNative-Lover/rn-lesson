@@ -83,7 +83,7 @@ export default class Chatting extends Component {
     switch (itemData.id) {
       //相册
       case 1:
-
+      
       break;
       //拍摄
       case 2:
