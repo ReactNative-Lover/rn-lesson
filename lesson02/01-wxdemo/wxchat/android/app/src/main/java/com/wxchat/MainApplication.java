@@ -3,7 +3,6 @@ package com.wxchat;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.mg.app.PickerPackage;
 import com.mehcode.reactnative.splashscreen.SplashScreenPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
@@ -27,7 +26,6 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new PickerPackage(),
             new SplashScreenPackage(),
             new RNShakeEventPackage(),
             new RCTCameraPackage()
